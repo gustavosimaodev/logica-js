@@ -1,5 +1,6 @@
 alert('Boas vindas ao jogo do número secreto');
-let numeroSecreto = parseInt( Math.random() * 100 + 1 );
+let limite = 100;
+let numeroSecreto = parseInt( Math.random() * limite + 1 );
 console.log (numeroSecreto);
 
 //let chute = prompt('Escolha um número entre 1 e 10'); //sempre testar os ERROS
@@ -10,7 +11,7 @@ let tentativas = 1;
 
 //Enquanto - Estrutura de Looping
 while (chute != numeroSecreto) {
-    chute = prompt('Escolha um número entre 1 e 100');
+    chute = prompt(`Escolha um número entre 1 e ${limite}`);
 
     // If/else - Estrutura condicional
     if (chute == numeroSecreto) {
