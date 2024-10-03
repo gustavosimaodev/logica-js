@@ -1,5 +1,5 @@
 alert('Boas vindas ao jogo do número secreto');
-let numeroSecreto = 5;
+let numeroSecreto = parseInt( Math.random() * 100 + 1 );
 console.log (numeroSecreto);
 
 //let chute = prompt('Escolha um número entre 1 e 10'); //sempre testar os ERROS
@@ -10,11 +10,11 @@ let tentativas = 1;
 
 //Enquanto - Estrutura de Looping
 while (chute != numeroSecreto) {
-    chute = prompt('Escolha um número entre 1 e 10');
+    chute = prompt('Escolha um número entre 1 e 100');
 
     // If/else - Estrutura condicional
     if (chute == numeroSecreto) {
-        alert (`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas.`);
+        break;
 
     } else {
         if (chute < numeroSecreto) {
@@ -27,4 +27,13 @@ while (chute != numeroSecreto) {
         tentativas ++;
     }
 }
+
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
+alert (`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
+
+//if (tentativas > 1) {
+//    alert (`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas.`);
+//} else {
+//    alert (`Isso aí! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativa.`);
+//}
 
